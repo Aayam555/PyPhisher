@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Log in to Facebook</title>
+
+    <link rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico">
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+            background: #f0f2f5;
+      }
+
+      .image{
+        text-align: center;
+        margin-top: 36px;
+      }
+
+      .login-text{
+        font-size: 18px;
+        text-align: center;
+        padding: 24px 0 16px 0;
+        line-height: 22px;
+      }
+
+      .card{
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+        margin: auto;
+        padding: 0 0 14px 0;
+        width: 396px;
+        background: white;
+      }
+
+      .input{
+        padding: 6px 0;
+      }
+
+      .email-input, .pass-input{
+        border: 1px solid #dddfe2;
+        border-radius: 6px;
+        font-size: 17px;
+        padding: 14px 16px;
+        width: 367px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 12px;
+      }
+
+      .email-input, .pass-input:hover{
+        border: 1px solid #dddfe2;
+      }
+
+      #login-btn{
+        width: 367px;
+        padding: 14px;
+        display: block;
+        margin: auto;
+        font-size: 20px;
+        border-radius: 6px;
+        border: none;
+        background-color: #1877f2;
+        color: white;
+        cursor: pointer;
+      }
+
+      #forgotten{
+        display: block;
+        text-align: center;
+        color: #1877f2;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        margin: 12px;
+      }
+      .or{
+        text-align: center;
+        font-size: 0.7rem;
+        margin-bottom: 12px;
+      }
+
+      #create-btn{
+        width: 210px;
+        padding: 12px;
+        display: block;
+        margin: auto;
+        font-size: 18px;
+        border-radius: 6px;
+        border: none;
+        background-color: #42b72a;
+        color: white;
+        cursor: pointer;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="login-section">
+    <div class="image">
+      <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook" width="240px">
+    </div>
+
+    <div class="card">
+      <div>
+          <span>
+            <div class="login-text">
+              Log in to Facebook
+            </div>
+          </span>
+      </div>
+      <form class="input">
+        <input type="text" class="email-input" name="email" id="email" tabindex="0" placeholder="Email address or phone number" value="" autofocus="1" autocomplete="username" aria-label="Email address or phone number">
+        <input type="password" class="pass-input" name="pass" id="pass" tabindex="0" placeholder="Password" value="" autocomplete="current-password" aria-label="Password">
+        <button id="login-btn" type="button" name="button">Log In</button>
+      </form>
+      <a id="forgotten" href="#">Forgotten account?</a>
+      <div class="or">or</div>
+      <button id="create-btn" type="button" name="button">Create New Account</button>
+    </div>
+  </div>
+  </body>
+</html>
